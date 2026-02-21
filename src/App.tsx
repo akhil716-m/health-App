@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Book, Heart, Target } from 'lucide-react';
+import { Home, Book, Heart, Target, ChefHat } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { cn } from './components/UI';
@@ -8,6 +8,7 @@ import { LibraryView } from './views/LibraryView';
 import { HealthConditionsView } from './views/HealthConditionsView';
 import { GoalsView } from './views/GoalsView';
 import { FoodDetailView } from './views/FoodDetailView';
+import { RecipesView } from './views/RecipesView';
 
 // --- Components ---
 
@@ -20,6 +21,7 @@ const BottomNav = () => {
     { id: 'library', path: '/library', label: 'Library', icon: Book },
     { id: 'health', path: '/health', label: 'Health', icon: Heart },
     { id: 'goals', path: '/goals', label: 'Goals', icon: Target },
+    { id: 'recipes', path: '/recipes', label: 'Recipes', icon: ChefHat },
   ];
 
   const activeTab = tabs.find(t => 
@@ -86,6 +88,7 @@ export default function App() {
             <Route path="/library" element={<LibraryView />} />
             <Route path="/health/*" element={<HealthConditionsView />} />
             <Route path="/goals/*" element={<GoalsView />} />
+            <Route path="/recipes/*" element={<RecipesView />} />
             <Route path="/food/:id" element={<FoodDetailView />} />
           </Routes>
         </AnimatePresence>

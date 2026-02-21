@@ -65,3 +65,19 @@ export interface Goal {
   limit_food_ids: string[];
   sample_meal_plan: MealPlan;
 }
+
+export interface Recipe {
+  id: string;
+  name: string;
+  category: string;
+  meal_type: string;
+  serves: string;
+  healing_level: 'High' | 'Moderate' | 'Low';
+  digestibility: 'Very Easy' | 'Easy' | 'Medium';
+  grain_based: boolean;
+  raw: boolean;
+  contains_nuts_seeds: boolean;
+  ingredients: string[];
+  pre_preparation: string[];
+  method_steps: string[];
+}
