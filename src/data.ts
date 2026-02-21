@@ -11,7 +11,8 @@ import { TRADITIONAL_ITEMS } from './data/traditional';
 import { SPICES_ITEMS } from './data/spices';
 import { HEALTH_CONDITIONS as CONDITIONS } from './data/conditions';
 import { GOALS as GOAL_LIST } from './data/goals';
-import { FoodItem, HealthCondition, Goal } from './types';
+import { RECIPES as RECIPE_LIST } from './data/recipes';
+import { FoodItem, HealthCondition, Goal, Recipe } from './types';
 
 export const FOOD_ITEMS: FoodItem[] = [
   ...GRAINS_ITEMS,
@@ -29,3 +30,4 @@ export const FOOD_ITEMS: FoodItem[] = [
 
 export const HEALTH_CONDITIONS: HealthCondition[] = CONDITIONS;
 export const GOALS: Goal[] = GOAL_LIST;
+export const RECIPES: Recipe[] = RECIPE_LIST;
